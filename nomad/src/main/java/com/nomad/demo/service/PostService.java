@@ -1,17 +1,14 @@
 package com.nomad.demo.service;
 
 import com.nomad.demo.domain.category.Category;
-import com.nomad.demo.domain.post.DetailResponseDto;
+import com.nomad.demo.domain.post.PostDetailResponseDto;
 import com.nomad.demo.domain.post.Post;
-import com.nomad.demo.domain.post.PostResponseDto;
 import com.nomad.demo.repository.CategoryRepository;
 import com.nomad.demo.repository.PostRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -25,7 +22,7 @@ public class PostService {
 	}
 
 	@Transactional
-	public DetailResponseDto getPostDetail(Post post) {
+	public PostDetailResponseDto getPostDetail(Post post) {
 		return post.toDetailResponseDto(getCategory(post));
 	}
 

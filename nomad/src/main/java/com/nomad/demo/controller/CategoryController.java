@@ -1,6 +1,7 @@
 package com.nomad.demo.controller;
 
 import com.nomad.demo.service.CategoryService;
+import com.nomad.demo.service.PostService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

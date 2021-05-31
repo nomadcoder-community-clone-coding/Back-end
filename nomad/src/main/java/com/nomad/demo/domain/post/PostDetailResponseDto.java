@@ -9,7 +9,7 @@ import java.sql.Timestamp;
 @Getter
 @AllArgsConstructor
 @Builder
-public class DetailResponseDto {
+public class PostDetailResponseDto {
 	private final long id;
 	private final String title;
 	private final String content;

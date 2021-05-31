@@ -32,8 +32,8 @@ public class Post {
 	@Column
 	private long likes;
 
-	public DetailResponseDto toDetailResponseDto(Category category) {
-		return DetailResponseDto.builder()
+	public PostDetailResponseDto toDetailResponseDto(Category category) {
+		return PostDetailResponseDto.builder()
 			.id(id)
 			.writer(writer)
 			.title(title)
