@@ -22,7 +22,7 @@ public class Post {
 	private Timestamp createdDate;
 	private String writer;
 	@Column
-	private String writerImage;
+	private String writerPhoto;
 	@Column(nullable = false)
 	private String content;
 	@Column
@@ -43,6 +43,7 @@ public class Post {
 			.likes(likes)
 			.categoryId(categoryId)
 			.category(category.getName())
+			.writerPhoto(writerPhoto)
 			.build();
 	}
 
