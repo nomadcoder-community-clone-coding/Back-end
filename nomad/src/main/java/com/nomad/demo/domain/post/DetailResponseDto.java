@@ -18,4 +18,6 @@ public class DetailResponseDto {
 	private final Timestamp createdDate;
 	private final String writer;
 	private final int commentNum;
+	private final long categoryId; // 이상함
+	private final long likes;
 }
