@@ -1,0 +1,2 @@
+com/nomad/demo/ApplicationTests.java
+ com.nomad.demo.ApplicationTests
