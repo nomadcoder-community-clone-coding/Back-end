@@ -14,4 +14,12 @@ public class Category {
 	private long id;
 	@Column(nullable = false)
 	private String name;
+
+	public CategoryResponseDto toCategoryResponseDto(Long postNum) {
+		return CategoryResponseDto.builder()
+			.id(id)
+			.name(name)
+			.postNum(postNum)
+			.build();
+	}
 }
