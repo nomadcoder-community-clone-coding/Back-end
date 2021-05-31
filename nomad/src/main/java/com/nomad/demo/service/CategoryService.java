@@ -39,7 +39,8 @@ public class CategoryService {
 	}
 
 	public List<PostResponseDto> getPostListByCategoryId(Long categoryId) {
-		List<Post> postList = postRepository.findAllByCategoryId(categoryId);
+		List<Post> postList = postRepository.findAllByCategoryId
+			(Sort.by(Sort.Direction.DESC, "id"), categoryId);
 		List<PostResponseDto> result = new ArrayList<>();
 		for (Post post : postList)
 			result.add(post.toPostResponseDto(getCategory(post)));
