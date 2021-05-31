@@ -1,4 +1,3 @@
-
 package com.nomad.demo.repository;
 
 import com.nomad.demo.domain.post.Post;

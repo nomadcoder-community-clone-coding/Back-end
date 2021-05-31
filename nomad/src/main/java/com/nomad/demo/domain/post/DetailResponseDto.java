@@ -6,7 +6,6 @@ import lombok.Getter;
 
 import java.sql.Timestamp;
 
-
 @Getter
 @AllArgsConstructor
 @Builder
@@ -19,7 +18,6 @@ public class DetailResponseDto {
 	private final Timestamp createdDate;
 	private final String writer;
 	private final int commentNum;
-	private final long categoryId;
+	private final long categoryId; // 이상함
 	private final long likes;
-
 }

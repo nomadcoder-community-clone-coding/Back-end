@@ -14,14 +14,14 @@ import java.util.Optional;
 @Controller
 @AllArgsConstructor
 public class PostController {
-    private final PostService postService;
+	private final PostService postService;
 
-    @GetMapping("/post/{id}")
-    public ResponseEntity<Object> getPostDetail(@PathVariable Long id) {
-        Optional<Post> post = postService.getPost(id);
-        if (post.isPresent())
-            return ResponseEntity.ok(postService.getPostDetail(post.get()));
-        else
-            return ResponseEntity.badRequest().body(HttpStatus.BAD_REQUEST.value());
-    }
+	@GetMapping("/post/{id}")
+	public ResponseEntity<Object> getPostDetail(@PathVariable Long id) {
+		Optional<Post> post = postService.getPost(id);
+		if (post.isPresent())
+			return ResponseEntity.ok(postService.getPostDetail(post.get()));
+		else
+			return ResponseEntity.badRequest().body(HttpStatus.BAD_REQUEST.value());
+	}
 }
