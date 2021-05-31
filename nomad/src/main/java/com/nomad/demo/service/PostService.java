@@ -27,12 +27,7 @@ public class PostService {
 	}
 	
 	public Category getCategory(Post post) {
-//		Optional<Category> category = categoryRepository.findById(post.getCategoryId());
-//		if (category.isPresent())
-//			return category.get();
-
-
-			return categoryRepository.findById(post.getCategoryId()).get();
-
+		Optional<Category> category = categoryRepository.findById(post.getCategoryId());
+		return category.orElseGet(Category::new);
 	}
 }
