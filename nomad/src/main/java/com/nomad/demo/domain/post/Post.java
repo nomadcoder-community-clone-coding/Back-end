@@ -29,6 +29,8 @@ public class Post {
 	private int commentNum;
 	@Column
 	private long categoryId;
+	@Column
+	private long likes;
 
 	public DetailResponseDto toDetailResponseDto(Category category) {
 		return DetailResponseDto.builder()
@@ -38,7 +40,21 @@ public class Post {
 			.content(content)
 			.commentNum(commentNum)
 			.createdDate(createdDate)
+			.likes(likes)
+			.categoryId(categoryId)
 			.category(category.getName())
 			.build();
+	}
+
+	public PostResponseDto toPostResponseDto(Category category) {
+		return PostResponseDto.builder()
+				.id(id)
+				.writer(writer)
+				.title(title)
+				.commentNum(commentNum)
+				.createdDate(createdDate)
+				.likes(likes)
+				.category(category.getName())
+				.build();
 	}
 }
