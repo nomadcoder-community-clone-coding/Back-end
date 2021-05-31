@@ -48,13 +48,13 @@ public class Post {
 
 	public PostResponseDto toPostResponseDto(Category category) {
 		return PostResponseDto.builder()
-				.id(id)
-				.writer(writer)
-				.title(title)
-				.commentNum(commentNum)
-				.createdDate(createdDate)
-				.likes(likes)
-				.category(category.getName())
-				.build();
+			.id(id)
+			.writer(writer)
+			.title(title)
+			.commentNum(commentNum)
+			.createdDate(createdDate)
+			.likes(likes)
+			.category(category.getName())
+			.build();
 	}
 }
