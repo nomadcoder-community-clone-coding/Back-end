@@ -22,7 +22,7 @@ public class Post {
 	private Timestamp createdDate;
 	private String writer;
 	@Column
-	private String writerImage;
+	private String writerPhoto;
 	@Column(nullable = false)
 	private String content;
 	@Column
@@ -32,8 +32,8 @@ public class Post {
 	@Column
 	private long likes;
 
-	public DetailResponseDto toDetailResponseDto(Category category) {
-		return DetailResponseDto.builder()
+	public PostDetailResponseDto toDetailResponseDto(Category category) {
+		return PostDetailResponseDto.builder()
 			.id(id)
 			.writer(writer)
 			.title(title)
@@ -43,18 +43,19 @@ public class Post {
 			.likes(likes)
 			.categoryId(categoryId)
 			.category(category.getName())
+			.writerPhoto(writerPhoto)
 			.build();
 	}
 
 	public PostResponseDto toPostResponseDto(Category category) {
 		return PostResponseDto.builder()
-				.id(id)
-				.writer(writer)
-				.title(title)
-				.commentNum(commentNum)
-				.createdDate(createdDate)
-				.likes(likes)
-				.category(category.getName())
-				.build();
+			.id(id)
+			.writer(writer)
+			.title(title)
+			.commentNum(commentNum)
+			.createdDate(createdDate)
+			.likes(likes)
+			.category(category.getName())
+			.build();
 	}
 }

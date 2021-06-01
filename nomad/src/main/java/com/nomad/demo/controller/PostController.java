@@ -19,9 +19,8 @@ public class PostController {
 	@GetMapping("/post/{id}")
 	public ResponseEntity<Object> getPostDetail(@PathVariable Long id) {
 		Optional<Post> post = postService.getPost(id);
-		if (post.isPresent())
-			return ResponseEntity.ok(postService.getPostDetail(post.get()));
-		else
-			return ResponseEntity.badRequest().body(HttpStatus.BAD_REQUEST.value());
+		return post.<ResponseEntity<Object>>
+			map(value -> ResponseEntity.ok(postService.getPostDetail(value)))
+			.orElseGet(() -> ResponseEntity.badRequest().body(HttpStatus.BAD_REQUEST.value()));
 	}
 }

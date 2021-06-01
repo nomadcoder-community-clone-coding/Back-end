@@ -9,14 +9,12 @@ import java.sql.Timestamp;
 @AllArgsConstructor
 @Builder
 public class PostResponseDto {
-
     private final long id;
     private final String title;
     private final String category;
+    private final String writer;
     private final String writerPhoto;
     private final Timestamp createdDate;
-    private final String writer;
     private final int commentNum;
     private final long likes;
-
 }
