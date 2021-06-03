@@ -43,11 +43,11 @@ INSERT INTO `nomadclone`.`category` (`id`, `name`) VALUES (15, "type_test");
 
 ```sql
 INSERT INTO `nomadclone`.`post`
-(`id`, `title`, `writer`, `created_date`, `category_id`, `likes`, `comment_num`, `content`, `writer_image`)
+(`id`, `title`, `writer`, `created_date`, `category_id`, `likes`, `comment_num`, `content`, `writer_photo`)
 VALUES
 (1, "dsf", "sdfsdf","2021-06-02 14:11:09", 5, 12, 34, "sdflsadkfjwefnvkwef", "http://sdf.png");
 INSERT INTO `nomadclone`.`post`
-(`id`, `title`, `writer`, `created_date`, `category_id`, `likes`, `comment_num`, `content`, `writer_image`)
+(`id`, `title`, `writer`, `created_date`, `category_id`, `likes`, `comment_num`, `content`, `writer_photo`)
 VALUES
 (2, "dsf", "sdfsdf","2021-06-02 18:11:09", 5, 12, 34, "sdflsadkfjwefnvkwef", "http://sdf.png");
 ```
