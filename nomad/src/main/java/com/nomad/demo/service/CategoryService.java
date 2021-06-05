@@ -39,8 +39,18 @@ public class CategoryService {
 	}
 
 	public List<PostResponseDto> getPostListByCategoryId(Long categoryId) {
+		if (categoryId == 1)
+			return getPostListByAll();
 		List<Post> postList = postRepository.findAllByCategoryId
 			(Sort.by(Sort.Direction.DESC, "id"), categoryId);
+		List<PostResponseDto> result = new ArrayList<>();
+		for (Post post : postList)
+			result.add(post.toPostResponseDto(getCategory(post)));
+		return result;
+	}
+
+	private List<PostResponseDto> getPostListByAll() {
+		List<Post> postList = postRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));
 		List<PostResponseDto> result = new ArrayList<>();
 		for (Post post : postList)
 			result.add(post.toPostResponseDto(getCategory(post)));

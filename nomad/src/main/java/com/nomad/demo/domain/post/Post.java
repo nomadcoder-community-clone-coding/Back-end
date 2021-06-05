@@ -53,7 +53,9 @@ public class Post {
 			.title(title)
 			.commentNum(commentNum)
 			.createdDate(createdDate)
+			.writerPhoto(writerPhoto)
 			.likes(likes)
+			.categoryId(categoryId)
 			.category(category.getName())
 			.build();
 	}
