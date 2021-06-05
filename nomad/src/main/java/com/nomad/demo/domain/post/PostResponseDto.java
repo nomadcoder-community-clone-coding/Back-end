@@ -14,7 +14,7 @@ public class PostResponseDto {
     private final String category;
     private final String writer;
     private final String writerPhoto;
-    private final Timestamp createdDate;
+    private final String createdDate;
     private final int commentNum;
     private final long likes;
 }

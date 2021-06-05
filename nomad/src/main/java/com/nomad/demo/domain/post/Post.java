@@ -18,8 +18,7 @@ public class Post {
 	@Column(nullable = false)
 	private String title;
 	@Column(updatable = false)
-	@CreatedDate
-	private Timestamp createdDate;
+	private String createdDate;
 	private String writer;
 	@Column
 	private String writerPhoto;
