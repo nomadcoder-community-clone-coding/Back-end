@@ -15,7 +15,7 @@ public class PostDetailResponseDto {
 	private final String content;
 	private final String category;
 	private final long categoryId;
-	private final Timestamp createdDate;
+	private final String createdDate;
 	private final int commentNum;
 	private final String writer;
 	private final String writerPhoto;
