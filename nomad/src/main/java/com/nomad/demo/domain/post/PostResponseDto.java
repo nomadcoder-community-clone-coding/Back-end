@@ -11,6 +11,7 @@ import java.sql.Timestamp;
 public class PostResponseDto {
     private final long id;
     private final String title;
+    private final long categoryId;
     private final String category;
     private final String writer;
     private final String writerPhoto;
